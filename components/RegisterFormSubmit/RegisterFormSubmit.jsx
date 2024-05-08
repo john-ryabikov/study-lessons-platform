@@ -7,7 +7,7 @@ import { useRouter } from "next/navigation";
 import { createUser } from "@utils/User/prismaUser"; 
 import { deleteUniq } from "@utils/Uniqecodes/prismaUniqecodes"; 
 
-export default function RegisterFormSubmit({uniqs, url}) {
+export default function RegisterFormSubmit({uniqs}) {
 
     const router = useRouter()
 
@@ -25,7 +25,6 @@ export default function RegisterFormSubmit({uniqs, url}) {
         setError("")
         setIsLoading(!isLoading)
         setStatus("Идет регистрация пользователя...")
-        console.log(url)
         const matchUniqs = uniqs.find((el) => el.codeUniq === uniq)
         try {
             if (pass.length < 6) {

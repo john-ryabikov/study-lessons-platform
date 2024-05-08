@@ -8,7 +8,7 @@ export default async function RegisterForm() {
 
 
     if (process.env.VERCEL_ENV === "production") {
-        BASE_URL = "https://study-platform-azure.vercel.app"
+        BASE_URL = "https://study-lessons-platform.vercel.app"
     }
 
     const res = await fetch(BASE_URL + "/api/uniqs/" + process.env.KEY_SECRET, {
@@ -20,7 +20,7 @@ export default async function RegisterForm() {
         <section className="register">
             <Image className="login__logo" priority src="/img/Header/logo_icon.svg" alt="Study Lessons" width={146} height={48}/>
             <Wrapper>
-                <RegisterFormSubmit uniqs={uniqs} url={BASE_URL}/>
+                <RegisterFormSubmit uniqs={uniqs}/>
             </Wrapper>
         </section>    
     )

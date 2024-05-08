@@ -14,7 +14,7 @@ export const authOptions = {
                 let BASE_URL = "http://localhost:3000"
 
                 if (process.env.VERCEL_ENV === "production") {
-                    BASE_URL = "https://study-platform-azure.vercel.app"
+                    BASE_URL = "https://study-lessons-platform.vercel.app"
                 }
                 const res = await fetch(BASE_URL + '/api/users/' + process.env.KEY_SECRET, { 
                     cache: 'no-store'
