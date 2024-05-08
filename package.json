@@ -7,7 +7,7 @@
     "build": "prisma generate next build",
     "start": "next start",
     "lint": "next lint",
-    "vercel": "prisma generate && prisma migrate deploy && next build"
+    "vercel": "prisma migrate deploy && next build"
   },
   "dependencies": {
     "@prisma/client": "^5.13.0",
