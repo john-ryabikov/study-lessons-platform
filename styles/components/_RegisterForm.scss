@@ -1,7 +1,9 @@
 .register {
     @include flex-column();
+    padding-top: 150px;
+    padding-bottom: 150px;
     width: 100%;
-    height: 100vh;
+    height: auto;
     &__logo {
         position: absolute;
         top: 30px;
@@ -136,7 +138,7 @@
 
 @media only screen and (min-width: 0) and (max-width: 767px) {
     .register {
-        height: 1000px;
+        padding-top: 200px;
         &__logo {
             left: 20px;
             width: 120px;
