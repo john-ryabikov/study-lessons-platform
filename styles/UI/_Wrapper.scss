@@ -1,0 +1,35 @@
+.wrapper {
+    // @include border();
+    @include flex-column();
+    width: 1180px;
+}
+@media only screen and (min-width: 0) and (max-width: 480px) {
+    .wrapper {
+        @include flex-column();
+        width: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+@media only screen and (min-width: 481px) and (max-width: 767px) {
+    .wrapper {
+        @include flex-column();
+        width: 100%;
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+}
+@media only screen and (min-width: 768px) and (max-width: 1179px) {
+    .wrapper {
+        @include flex-column();
+        width: 100%;
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+}
+@media only screen and (min-width: 1180px) and (max-width: 1300px) {
+    .wrapper {
+        @include flex-column();
+        width: 1080px;
+    }
+}

@@ -1,0 +1,71 @@
+.menu {
+    @include flex-column();
+    justify-content: flex-start;
+    position: fixed;
+    top: 0;
+    right: -330px;
+    width: 330px;
+    height: 100vh;
+    border-radius: 20px 0 0 20px;
+    transition: transform 0.4s;
+    padding-top: 100px;
+    background-color: #ffffff;
+    box-shadow: -8px 0px 8px -8px rgba(34, 60, 80, 0.2);
+    z-index: 99999;
+    &_active {
+        transform: translateX(-100%);
+        transition: transform 0.4s;
+    }
+    &__close-btn {
+        @include flex-column();
+        position: absolute;
+        top: 25px;
+        left: 15px;
+        width: 35px;
+        height: 35px;
+    }
+    &__acc-box {
+        @include flex-row();
+        justify-content: space-between;
+        position: absolute;
+        top: 20px;
+        right: 15px;
+
+    }
+    &__aside {
+        @include flex-column();
+        justify-content: flex-start;
+        width: 300px;
+        height: 85%;
+        padding: 20px;
+        background-color: #F1F2DA;
+        border-radius: 35px;
+    }       
+    &__nav-link {
+        position: relative;
+        height: 60px;
+        font-size: 20px;
+        font-weight: 500;
+        color: #000000;
+        line-height: 32px;
+        margin-bottom: 20px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+        &::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: #000000;
+            transition: all 0.4s;
+        }
+        &:hover::before {
+            width: 100%;
+            right: 0;
+        }
+    }
+
+}

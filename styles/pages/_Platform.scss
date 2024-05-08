@@ -1,0 +1,40 @@
+/*Стандартные настройки страницы 
+=======================================*/
+
+html {overflow-x: hidden;}
+body {position: relative; margin: 0; padding: 0; overflow-x: hidden; max-width: 100vw; background-color: #FBFBFB; font-family: var(--manrope), sans-serif;}
+* {box-sizing: border-box;}
+a {text-decoration: none;}
+p {margin: 0; user-select: none;}
+input::placeholder {color: rgba(207, 207, 207, 0.8); font-size: 16px; font-family: var(--manrope), sans-serif;}
+h1,h2,h3,h4,h5,h6 {font-weight: inherit; font-size: inherit; user-select: none; margin: 0; padding: 0;}
+ul[class],ol[class] {list-style: none; margin: 0; padding: 0;}
+img {pointer-events: none}
+button {background: none; border: none; padding: 0; font-family: var(--manrope), sans-serif;}
+.overflow-lock {overflow-y: hidden;}
+.platform {position: relative; display: flex; flex-direction: row; align-items: center; justify-content: space-between; width: 90%; height: calc(100vh - 180px); margin: 0 auto; margin-top: 40px;}
+.main-platform {position: relative; display: flex; flex-direction: center; align-items: center; justify-content: center; width: 100%; height: 100%;}
+
+//Миксины   --------------------------------------------------------------------------------------------------------------------------------------
+
+@import "../mixins/mixins";
+
+//UI  --------------------------------------------------------------------------------------------------------------------------------------------
+
+@import "../UI/Wrapper";
+
+//Шапка страницы   -------------------------------------------------------------------------------------------------------------------------------
+
+@import "../components/Header";
+
+//Боковое меню страницы   ------------------------------------------------------------------------------------------------------------------------
+
+@import "../components/Aside";
+
+//Правая часть страницы   ------------------------------------------------------------------------------------------------------------------------
+
+@import "../components/Platform-page";
+
+//Меню   -----------------------------------------------------------------------------------------------------------------------------------------
+
+@import "../components/Menu";

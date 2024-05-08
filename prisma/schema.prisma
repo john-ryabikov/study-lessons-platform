@@ -1,0 +1,26 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider          = "postgresql"
+  url               = env("POSTGRES_URL")
+  directUrl         = env("POSTGRES_URL_NON_POOLING")
+  shadowDatabaseUrl = env("POSTGRES_URL_NON_POOLING")
+}
+
+model User {
+  id        Int    @id @default(autoincrement())
+  userEmail String @unique @map("user_email")
+  userName  String @map("user_name")
+  userPass  String @map("user_pass")
+
+  @@map("user")
+}
+
+model Uniqs {
+  id       Int    @id @default(autoincrement())
+  codeUniq String @map("code_uniq")
+
+  @@map("uniqs")
+}

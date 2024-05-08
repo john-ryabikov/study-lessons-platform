@@ -1,0 +1,93 @@
+.platform-page {
+    @include flex-column();
+    justify-content: flex-start;
+    width: 90%;
+    height: 100%;
+    &__cont {
+        @include flex-column();
+        justify-content: flex-start;
+        width: 100%;
+    }
+    &__title {
+        position: relative;
+        font-weight: 500;
+        font-size: 48px;
+        color: #000000;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    &__text {
+        position: relative;
+        width: 95%;
+        font-weight: 300;
+        font-size: 20px;
+        text-align: center;
+        color: #000000;
+        opacity: 0.75;
+        line-height: 160%;
+        margin-bottom: 60px;
+    }
+    &__video {
+        cursor: pointer;
+    }
+    &__links {
+        @include flex-row();
+        justify-content: space-between;
+        width: 480px;
+    }
+    &__link {
+        @include flex-column();
+        font-weight: 500;
+        font-size: 14px;
+        text-transform: uppercase;
+        padding: 10px 20px 10px 20px;
+        width: 220px;
+        height: 60px;
+        background-color: #9ACFFF;
+        border-radius: 16px;
+        color: #ffffff;
+        transition: all 0.4s;
+        cursor: pointer;
+        margin-top: 60px;
+        &:hover {
+            background-color: #6fb9fd;
+        }
+    }
+}
+
+@media only screen and (min-width: 0px) and (max-width: 767px) {
+    .platform-page {
+        width: 95%;
+        &__title {
+            font-size: 36px;
+        }
+        &__text {
+            width: 100%;
+            font-size: 18px;
+        }
+        &__video {
+            position: relative;
+            width: 100%;
+            height: 220px;
+            margin-bottom: 50px;
+        }
+        &__links {
+            @include flex-column();
+            flex-direction: column-reverse;
+            justify-content: flex-start;
+            width: 100%;
+            height: 140px;
+        }
+        &__link {
+            width: 100%;
+            margin-top: 20px;
+            &:last-child {
+                margin-top: 0;
+            }
+        }
+    }
+}
+@media only screen and (min-width: 768px) and (max-width: 1179px) {
+}
+@media only screen and (min-width: 1180px) and (max-width: 1300px) {
+} 

@@ -1,0 +1,75 @@
+.header {
+    @include flex-column();
+    width: 100%;
+    height: 100px;
+    padding: 20px;
+    border-bottom: 1px solid #a7a7a7;
+    &__cont {
+        @include flex-row();
+        justify-content: space-between;
+        width: 90%;
+    }
+    &__logo {
+        position: relative;
+        width: auto;
+        height: auto;
+    }
+    &__acc-box {
+        @include flex-row();
+        justify-content: space-between;
+    }
+    &__acc-icon {
+        position: relative;
+        margin-right: 10px;
+    }
+    &__acc-name {
+        font-weight: 400;
+        font-size: 18px;
+        color: #000000;
+        margin-right: 20px;
+    }
+    &__btn-logout {
+        @include flex-column();
+        font-weight: 500;
+        font-size: 14px;
+        text-transform: uppercase;
+        padding: 10px 30px 10px 30px;
+        height: 50px;
+        background-color: #9ACFFF;
+        border-radius: 20px;
+        color: #ffffff;
+        transition: all 0.4s;
+        cursor: pointer;
+        -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+        &:hover {
+            background-color: #6fb9fd;
+        }
+    }
+    &__menu-btn {
+        @include flex-column();
+        cursor: pointer;
+        transition: all 0.4s;
+        display: none;
+        -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+        &:hover {
+            transform: scale(1.02, 1.02);
+        }
+    }
+}
+
+@media only screen and (min-width: 0) and (max-width: 767px) {
+    .header {
+        &__cont {
+            width: 100%;
+        }
+        &__logo {
+            width: 120px;
+        }
+        &__acc-box {
+            display: none;
+        }
+        &__menu-btn {
+            display: block;
+        }
+    }
+}
